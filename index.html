@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Bigbite</title>
+     <link rel="icon" type="image/png" sizes="128x128" href="imgs/Burger Logo.png" >
+     <link rel="stylesheet" type="text/css" href="styleeees.css">
+        
+     <!--box icons-->
+     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+     <!--Google fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?
+     family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        
+       
+        
+    </head>
+    <body>
+        <!---- header --->
+<header>
+ <!--<a href="#" class="logo"> <i class='bx bxs-home'></i>Bigbite</a>-->
+ <a href="#" class="logo">
+  <img src="imgs/Burger Logox.png" alt="Bigbite Logo">Bigbite
+</a>
+ <ul class="navlist">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#shop">Our Shop</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li class="dropdown">
+        <a href="#" id="language-toggle">Language<i class='bx bx-chevron-down'></i></a>
+        <ul class="dropdown-menu" id="language-menu">
+          <li><a href="Index.html">English</a></li>
+          <li><a href="Index3.html">Arabic</a></li>
+          <li><a href="Index2.html">German</a></li>
+        </ul>
+      </li>
+  </ul>
+  
+  <script>
+    const toggleBtn = document.getElementById('language-toggle');
+    const menu = document.getElementById('language-menu');
+  
+    let closeTimeout;
+  
+    toggleBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      // Toggle menu visibility
+      menu.classList.toggle('show');
+  
+      // If it's now shown, start the timer
+      if (menu.classList.contains('show')) {
+        // Clear any existing timeout
+        clearTimeout(closeTimeout);
+  
+        // Set timeout to close after 10 seconds
+        closeTimeout = setTimeout(() => {
+          menu.classList.remove('show');
+        }, 10000); // 10000 ms = 10 seconds
+      } else {
+        // If manually closed before 10 sec, clear timer
+        clearTimeout(closeTimeout);
+      }
+    });
+  
+    // Optional: close dropdown if clicked outside
+    document.addEventListener('click', function (e) {
+      if (!toggleBtn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('show');
+        clearTimeout(closeTimeout);
+      }
+    });
+  </script>
+  
+
+<div class="nav-icons">
+    <a href="#shop"><i class='bx bx-search'></i></a>
+    <a href="cart.html"><i class='bx bx-cart'></i></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+</header>
+       
+<!--- home --->
+<section class="home" id="home">
+<div class="home-text">
+<h1>Meet, <span>Eat &</span> <br> Enjoy The true <br> taste</h1>
+<a href="#shop" class="btn">Explore Menu<i class='bx bxs-right-arrow' ></i></a>
+<a href="#shop" class="btn2">Order Now</a>
+</div>
+
+<div class="home-img">
+<img src="imgs/download (10).png" width="658.5" height="680">
+
+</div>
+</section>
+
+<!--container-->
+<section class="container">
+  <div class="container-box">
+    <img src="imgs/c1.png">
+    <h3>11:00 am - 10:00 pm</h3>
+    <a href="#">Working Hours</a>
+    </div>
+    
+    <div class="container-box">
+    <img src="imgs/c2.png">
+    <h3>Khan El-Khalili 142</h3>
+    <a href="#">Get Directions</a>
+    </div>
+    
+    <div class="container-box">
+    <img src="imgs/c3.png">
+    <h3>01122839292</h3>
+    <a href="#">Call Us Now</a>
+    </div>
+</section>
+
+<!--about us--->
+<section class="about" id="about">
+<div class="about-img">
+<img src="imgs/Hamburger and friesx.png">
+</div>
+
+<div class="about-text">
+  <h2>Great moments <br> start with a great burger.</h2>
+  <p>
+  Sink your teeth into the bold, smoky flavor of our handcrafted burgers — made with the freshest ingredients and grilled to perfection. <br><br>
+  From classic cheeseburgers to gourmet creations, every bite is a celebration of flavor. 
+  Whether you're dining in, grabbing a quick bite, or ordering for the whole crew, Bigbite has something to satisfy every craving.
+  </p>
+  <a href="#" class="btn">Explore Story<i class='bx bxs-right-arrow' ></i></a>
+</div>
+</section>
+
+<!--our shop-->
+<section class="shop" id="shop"> 
+  <div class="middle-text">
+    <h4>Our Shop</h4>
+    <h2>Lets Check Popular Products</h2>
+  </div>
+
+  <div class="shop-content">
+    <div class="row">
+      <img src="imgs/Beef Burger1.png">
+      <h3>Beef Classic</h3>
+      <p>Beef burger piece – cheese sauce with mayonnaise, lettuce, pickles, and tomatoes</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 119.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Beef Classic" data-price="119.99" data-image="imgs/Beef Burger1.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/Beef Burger2.png">
+      <h3>Ranch Lovers</h3>
+      <p>Crispy chicken breast – slices of smoked turkey – cheese sauce and ranch sauce – with lettuce, pickles, and tomatoes</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 149.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Ranch Lovers" data-price="149.99" data-image="imgs/Beef Burger2.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/Double Chicken Burger.png">
+      <h3>Happiness Rocket</h3>
+      <p>Two crispy chicken breasts – slices of smoked turkey – cheese sauce – with mayonnaise, lettuce, pickles, and tomatoes</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 154.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Happiness Rocket" data-price="154.99" data-image="imgs/Double Chicken Burger.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/Beef burger and Cola and Fries.png">
+      <h3>Super Dynamite</h3>
+      <p>Two beef burger piceces – slices of smoked turkey with cheese sauce – with mayonnaise, lettuce, pickles, and tomatoes + a pack of fries + a can of cola</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 199.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Super Dynamite" data-price="199.99" data-image="imgs/Beef burger and Cola and Fries.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/drumsticks bucket.png">
+      <h3>Family Feast Bucket</h3>
+      <p>8 Piceces + Bread</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 309.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Family Feast Bucket" data-price="309.99" data-image="imgs/drumsticks bucket.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/drumsticks and fries.png">
+      <h3>Happy Snack</h3>
+      <p>3 Piceces with Medium size French Fries and Sauce</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 154.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Happy Snack" data-price="154.99" data-image="imgs/drumsticks and fries.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/Fries.png">
+      <h3>Golden Fries</h3>
+      <p>Large size French Fries</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 34.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Golden Fries" data-price="34.99" data-image="imgs/Fries.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/Chicken Burger.png">
+      <h3>Chicken Classic</h3>
+      <p>Crispy chicken breast – cheese sauce with mayonnaise, lettuce, pickles, and tomatoes</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 119.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Chicken Classic" data-price="119.99" data-image="imgs/Chicken Burger.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+
+    <div class="row">
+      <img src="imgs/Coca.png">
+      <h3>Coca-Cola</h3>
+      <p>CocaCola Can 350 ml</p>
+      <div class="in-text">
+        <div class="price"><h6>EGP 24.99</h6></div>
+        <div class="s-btnn">
+          <a href="#" class="add-to-cart-btn" data-name="Coca-Cola" data-price="24.99" data-image="imgs/Coca.png">Order now</a>
+        </div>
+      </div>
+      <div class="top-icon"><a href="#"><i class='bx bx-heart'></i></a></div>
+    </div>
+  </div>
+
+  <div class="row-btn">
+    <a href="#" class="btn">All Products<i class='bx bxs-right-arrow'></i></a>
+  </div>
+</section>
+
+<!---contact--->
+<section class="contact" id="contact">
+<div class="contact-content">
+  <div class="contact-img">
+    <div class="c-one">
+ <img src="imgs/f1.png">
+
+</div>
+<div class="c-one">
+<img src="imgs/f2.png">
+</div>
+</div>
+
+<div class="contact-text">
+  <h2>Contact Us</h2>
+  <p>Over its history as a food, the main uses of the burger are in fast food meals, homemade dinners, 
+    barbecues, as a filling in sandwiches, as a centerpiece in combo meals, and as a customizable dish with 
+    various toppings and sides. </p>
+  <div class="social">
+    <a href="#" class="clr"><i class='bx bxl-instagram'></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61576254241805"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-google' ></i></a>
+    </div>
+   </div>
+
+   <div class="details">
+   <div class="main-d">
+    <a href="#"><i class='bx bxs-location-plus' ></i>Khan El-Khalili 142</a>
+    </div>
+    
+    <div class="main-d">
+      <a href="#"><i class='bx bx-mobile-alt'></i>01122839292</a>
+      </div>
+
+
+  </div>
+</div>
+</section>
+
+<!---scroll top --->
+<a href="#" class="scroll">
+<i class='bx bx-up-arrow-alt' ></i>
+</a>
+        <!--link to js-->
+        <script src="script.js"></script>
+
+        <!--cart orders-->
+        <script>
+          const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        
+          addToCartButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+              e.preventDefault();
+              const name = this.dataset.name;
+              const price = this.dataset.price;
+              const image = this.dataset.image;
+        
+              const product = { name, price, image };
+        
+              let cart = JSON.parse(localStorage.getItem('cart')) || [];
+              cart.push(product);
+              localStorage.setItem('cart', JSON.stringify(cart));
+        
+              alert(`${name} added to cart!`);
+            });
+          });
+        </script>
+
+        <!--cart list-->
+        <script>
+          const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        
+          addToCartButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+              e.preventDefault();
+              const name = this.dataset.name;
+              const price = this.dataset.price;
+              const image = this.dataset.image;
+        
+              const product = { name, price, image };
+        
+              let cart = JSON.parse(localStorage.getItem('cart')) || [];
+              cart.push(product);
+              localStorage.setItem('cart', JSON.stringify(cart));
+        
+              alert(`${name} added to cart!`);
+            });
+          });
+        </script>
+        
+
+    </body>
+</html>
